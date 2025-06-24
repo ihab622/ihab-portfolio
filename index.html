@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <title>Ihab Portfolio</title>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Ihab-ايــهاب</a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="ihab.png" alt="My Photo" />
+    </div>
+    <div class="home-content">
+      <h1>Hi, I'm Ihab</h1>
+      <h3><span>A Creative </span><span class="highlight">Designer</span></h3>
+      <p>Specialized in graphic design, social media, and digital branding with over 2 years of experience.</p>
+      <a href="#order" class="btn">Order Now</a>
+      <div class="social-icons">
+        <a href="https://youtube.com/@ihab-x-rct" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/212612345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/ihab__gb_05/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I'm Ihab, a passionate designer who creates meaningful and distinctive visual content. I focus on building visual identities, digital marketing, and delivering strong, creative designs that meet businesses' needs. I also manage social media accounts such as Instagram, Facebook, and WhatsApp, and we always welcome customer requests.</p>
+  </section>
+
+  <section class="work" id="work">
+    <h2>My Work</h2>
+    <div class="work-grid">
+      <img src="ICE CREAM.png" alt="Work 1" />
+      <img src="TAMU 1.png" alt="Work 2" />
+      <img src="assets_task_01jy9jw1v4f7a82ea3rfcnr9bf_1750521066_img_3.png" alt="Work 3" />
+      <img src="mechanic repair.png" alt="Work 4" />
+      <img src="chocolate cake.png" alt="Work 5" />
+      <img src="nescafe.png" alt="Work 6" />
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:ihabmalkyoutub@email.com">ihabmalkyoutub@email.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/ihab__gb_05/" target="_blank">@IHAB_ايـــــهاب</a></p>
+  </section>
+
+  <section class="order" id="order">
+    <h2>Place Your Order</h2>
+    <form class="order-form" onsubmit="showSuccessMessage(event)">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="service" rows="5" placeholder="What do you need? (e.g., Logo, Instagram post...)" required></textarea>
+      <button type="submit">Submit Order</button>
+    </form>
+    <p id="success-message" class="hidden">✅ Your request has been sent successfully!</p>
+  </section>
+
+  <script>
+    function showSuccessMessage(event) {
+      event.preventDefault();
+      const message = document.getElementById("success-message");
+      message.classList.remove("hidden");
+      message.classList.add("show");
+
+      event.target.reset();
+
+      setTimeout(() => {
+        message.classList.remove("show");
+        message.classList.add("hidden");
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
